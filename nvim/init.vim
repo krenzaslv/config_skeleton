@@ -8,17 +8,19 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'itchyny/lightline.vim'
+Plugin 'vim-airline/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
-Plugin 'mhartington/oceanic-next'
+Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
-
+let g:onedark_terminal_italics=1
+let g:onedark_termcolors=1
+let g:airline_theme='onedark'
 syntax on
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
-let g:lightline_theme='oceanicnext'
+set termguicolors
+colorscheme onedark 
+
+set number

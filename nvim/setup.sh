@@ -1,5 +1,6 @@
-mkdir ~/.local/share/nvim/bundle
-mkdir ~/.config/nvim/
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.local/share/nvim/bundle/Vundle.vim
+set +e
 
-cp init.vim ~/.config/nvim/
+mkdir -p ~/.local/share/nvim/bundle
+mkdir -p ~/.config/nvim/
+git clone -q https://github.com/VundleVim/Vundle.vim.git ~/.local/share/nvim/bundle/Vundle.vim
+cp nvim/init.vim ~/.config/nvim/
