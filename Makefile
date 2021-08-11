@@ -2,7 +2,7 @@
 
 include Make.conf
 
-all: development system
+all: development #system
 
 system: configure_dns
 
