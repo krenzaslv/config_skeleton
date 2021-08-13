@@ -1,3 +1,6 @@
+set exrc
+set secure
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -13,6 +16,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
