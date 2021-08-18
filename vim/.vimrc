@@ -14,7 +14,7 @@ call vundle#begin()
 	Plugin 'vim-airline/vim-airline'
 	Plugin 'terryma/vim-multiple-cursors'
 	Plugin 'scrooloose/nerdtree'
-	Plugin 'joshdick/onedark.vim'
+	Plugin 'rakr/vim-one'
 	Plugin 'sheerun/vim-polyglot'
 	Plugin 'ycm-core/YouCompleteMe'
 	Plugin 'skywind3000/asyncrun.vim'
@@ -23,13 +23,14 @@ call vundle#begin()
 call vundle#end()            " required
 
 filetype plugin indent on    " required
-let g:onedark_terminal_italics=1
-let g:onedark_termcolors=1
-let g:airline_theme='onedark'
+
+let g:airline_theme='one'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=1
-syntax on
-set termguicolors
-colorscheme onedark 
 
+set termguicolors
+colorscheme one 
+set background=dark
+
+syntax on
 set number
