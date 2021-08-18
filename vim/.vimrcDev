@@ -1,10 +1,11 @@
 map <C-g> : YcmCompleter GoTo  <CR>
 map <C-f> <Plug>(YCMFindSymbolInWorkspace)
 map <C-d> <Plug>(YCMFindSymbolInDocument)
-map <F5> :AsyncRun make -C build/ simulator <CR>
+map <F5> :CMakeBuild --parallel 4 simulator<CR>
 map <F6> :AsyncRun ./build/apps/simulator/simulator <CR>
 map <F7> :Step <CR>               
 map <F8> :Over<CR>               
 map <F9> :Continue <CR>               
 packadd termdebug
 
+let g:cmake_default_config = 'RelWithDebInfo'

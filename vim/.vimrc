@@ -19,6 +19,7 @@ call vundle#begin()
 	Plugin 'ycm-core/YouCompleteMe'
 	Plugin 'skywind3000/asyncrun.vim'
 	Plugin 'cdelledonne/vim-cmake'
+	Plugin 'dense-analysis/ale'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
