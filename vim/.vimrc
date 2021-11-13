@@ -20,6 +20,7 @@ call vundle#begin()
 	Plugin 'skywind3000/asyncrun.vim'
 	Plugin 'cdelledonne/vim-cmake'
 	Plugin 'dense-analysis/ale'
+	Plugin 'cjrh/vim-conda'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
@@ -31,22 +32,24 @@ endif
 let g:airline_theme='one'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=1
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
 
 set termguicolors
 colorscheme one 
 set background=dark
 
+let g:ale_linters = {'python': ['flake8', 'pylint']}
+let g:ale_fixers = {'python': ['autoflake', 'black']}
+let g:ale_fix_on_save = 1
+
 syntax on
 set number
+
+map <C-c> : YcmCompleter Format<CR>
+map <C-u> : YcmCompleter GoToReferences<CR>
+map <C-g> : YcmCompleter GoTo  <CR>
+map <C-f> <Plug>(YCMFindSymbolInWorkspace)
+map <C-d> <Plug>(YCMFindSymbolInDocument)
+map <F7> :Step <CR>               
+map <F8> :Over<CR>               
+map <F9> :Continue <CR>               
+packadd termdebug
