@@ -1,4 +1,4 @@
-Xft.dpi:       192
+Xft.dpi:     256 
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
@@ -6,9 +6,8 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-! #d8d8d8
-XTerm*background:        #d8d8d8
-XTerm*foreground:        #222D31
+XTerm*background:        #222D31
+XTerm*foreground:        #d8d8d8
 XTerm*pointerColor:      #1ABB9B
 XTerm*faceName:          Fixed
 XTerm*faceSize:          11
@@ -58,15 +57,17 @@ XTerm*selectToClipboard: true
 Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0
 
-!URxvt.font:                       xft:URWGothic-Book:size=10
+URxvt.font: xft:DejaVu Sans Mono:size=12
+!URxvt.letterSpace: -1
+!URxvt.font:                        xft:DejaVu Sans Mono for Powerline:size=10
+!URxvt.font:                       xft:Deja Vu Sans Mono:size=12
+! URxvt.font:                       xft:TerminessTTFNerdFontMono:size=16
 
 ! alternative font settings with 'terminus':
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 ! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 !! terminus names see end of file!
 
-URxvt.font:xft:Monospace:pixelsize=25
-URxvt.boldfont:xft:Monospace-Bold:pixelsize=25
 URxvt.depth:                      32
 URxvt.background:                 [100]#222D31
 URxvt*scrollBar:                  false
